@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sophisticated Tower Defense</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.177.0/build/three.module.js",
+        "three/examples/jsm/controls/OrbitControls": "https://cdn.jsdelivr.net/npm/three@0.177.0/examples/jsm/controls/OrbitControls.js"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div id="gameHeader">
+        <img src="https://img.icons8.com/ios-filled/50/ffffff/castle.png" alt="Game Logo" id="gameLogo">
+        <span id="gameTitle">Sophisticated Tower Defense</span>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <div id="gameInfo">
+        <div><img src="https://img.icons8.com/ios-filled/24/fa314a/like.png" class="hud-icon"> Health: <span id="health">100</span></div>
+        <div><img src="https://img.icons8.com/ios-filled/24/ffd700/medal2.png" class="hud-icon"> Score: <span id="score">0</span></div>
+        <div><img src="https://img.icons8.com/ios-filled/24/00bfff/wave.png" class="hud-icon"> Wave: <span id="wave">1</span></div>
+    </div>
+    <div id="controls">
+        <button id="startWaveBtn" class="control-button"><img src="https://img.icons8.com/ios-filled/24/ffffff/play.png" class="btn-icon"> Start Next Wave</button>
+        <button id="resetGameBtn" class="control-button"><img src="https://img.icons8.com/ios-filled/24/ffffff/restart.png" class="btn-icon"> Reset Game</button>
+    </div>
+    <!-- Custom Modal -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle">Game Over!</h2>
+            <p id="modalMessage">Your health ran out. Try again!</p>
+            <button id="modalCloseBtn" class="modal-button"><img src="https://img.icons8.com/ios-filled/24/ffffff/replay.png" class="btn-icon"> Play Again</button>
+        </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html> 
